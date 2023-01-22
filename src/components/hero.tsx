@@ -24,7 +24,7 @@ export const dropUpVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      stiffness: 100,
+      stiffness: 35,
       mass: 0.3
     }
   }
@@ -40,7 +40,7 @@ export const gamesVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      stiffness: 50,
+      stiffness: 30,
       mass: 0.1,
     }
   }
@@ -56,7 +56,7 @@ export const formVariant = {
     scale: 1,
     transition: {
       type: "spring",
-      stiffness: 60,
+      stiffness: 35,
       mass: 0.2
     }
   }
@@ -138,19 +138,19 @@ const Countdown = () => {
 
   return (
     <div className='grid grid-cols-4 gap-2'>
-      <div className="text-gray-50/90 p-2 rounded shadow-md slashed-zero text-center flex flex-col gap-1">
+      <div className="text-gray-50/90 rounded shadow-md slashed-zero text-center flex flex-col gap-1">
         <span className="font-bold tracking-tightest text-2xl">{days}</span>
         <span className="uppercase font-medium text-sm text-zinc-300/50">days</span>
       </div>
-      <div className="text-gray-50/90 p-2 rounded shadow-md slashed-zero text-center flex flex-col gap-1">
+      <div className="text-gray-50/90 rounded shadow-md slashed-zero text-center flex flex-col gap-1">
         <span className="font-bold tracking-tightest text-2xl">{hours}</span>
         <span className="uppercase font-medium text-sm text-zinc-300/50">hours</span>
       </div>
-      <div className="text-gray-50/90 p-2 rounded shadow-md slashed-zero text-center flex flex-col gap-1">
+      <div className="text-gray-50/90 rounded shadow-md slashed-zero text-center flex flex-col gap-1">
         <span className="font-bold tracking-tightest text-2xl">{minutes}</span>
         <span className="uppercase font-medium text-sm text-zinc-300/50">minutes</span>
       </div>
-      <div className="text-gray-50/90 p-2 rounded shadow-md slashed-zero text-center flex flex-col gap-1">
+      <div className="text-gray-50/90 rounded shadow-md slashed-zero text-center flex flex-col gap-1">
         <span className="font-bold tracking-tightest text-2xl">{seconds}</span>
         <span className="uppercase font-medium text-sm text-zinc-300/50">seconds</span>
       </div>

@@ -25,7 +25,7 @@ export const dropUpVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      stiffness: 20,
+      stiffness: 35,
       mass: 0.1
     }
   }

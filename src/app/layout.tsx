@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className='h-full'>{children}</body>
+      <body className='h-full antialiased'>{children}</body>
       <AnalyticsWrapper />
     </html>
   )

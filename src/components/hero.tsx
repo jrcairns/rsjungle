@@ -48,16 +48,16 @@ export const gamesVariants = {
 
 export const formVariant = {
   hidden: {
-    y: 40,
-    opacity: 0
+    opacity: 0,
+    scale: .95
   },
   visible: {
-    y: 0,
     opacity: 1,
+    scale: 1,
     transition: {
       type: "spring",
-      stiffness: 100,
-      mass: 0.3
+      stiffness: 60,
+      mass: 0.2
     }
   }
 };
@@ -90,11 +90,14 @@ export default function Hero() {
           </h1>
           <Countdown />
           <div className='flex flex-col'>
-            <form action="#" className="flex sm:w-full sm:max-w-lg rounded-full bg-white/70 backdrop-blur-lg overflow-hidden relative p-1 focus-within:ring-2 focus-within:ring-green-800">
-              <input required placeholder="Email" className="placeholder-gray-600 flex-1 focus:outline-none px-4 bg-transparent" type="email" />
-              <button className='block rounded-full border border-transparent bg-gradient-to-r from-green-800 to-green-900 px-5 py-3 text-base font-medium text-gray-50/90 font-semibold shadow hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:px-6' type="submit">Notify me</button>
+            <form action="#">
+              <div className='flex sm:w-full sm:max-w-lg rounded-full bg-white/70 backdrop-blur-lg overflow-hidden relative sm:p-1 focus-within:ring-2 focus-within:ring-green-800'>
+                <input required placeholder="Email" className="h-[50px] sm:h-auto placeholder-gray-600 flex-1 focus:outline-none px-4 bg-transparent" type="email" />
+                <button className='hidden sm:block rounded-full border border-transparent bg-gradient-to-r from-green-800 to-green-900 px-5 py-3 text-base text-gray-50/90 font-semibold shadow hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:px-6' type="submit">Notify me</button>
+              </div>
+              <button className='sm:hidden w-full mt-3 rounded-full border border-transparent bg-gradient-to-r from-green-800 to-green-900 px-5 py-3 text-base text-gray-50/90 font-semibold shadow hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:px-6' type="submit">Notify me</button>
             </form>
-            <span className="block text-xs text-gray-50/70 mt-4 mx-auto">Don&apos;t worry, we will never spam you!</span>
+            <span className="block text-xs text-gray-50/70 mt-4 mx-auto">*Don&apos;t worry, we will never spam you!</span>
           </div>
         </div>
       </motion.div>
@@ -126,7 +129,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-    </motion.div>
+    </motion.div >
   )
 }
 

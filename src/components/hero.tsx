@@ -86,7 +86,7 @@ export default function Hero() {
       <motion.div variants={formVariant}>
         <div className="max-w-lg mx-auto grid gap-6">
           <h1 className="text-4xl font-bold tracking-tight !leading-tight text-gray-50/90 sm:text-5xl">
-            Get Notified <br />When we Launch
+            Get notified <br />when we launch
           </h1>
           <Countdown />
           <div className='flex flex-col'>

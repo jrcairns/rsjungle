@@ -51,11 +51,6 @@ export default function Socials() {
           <img src="/twitch.svg" alt="twitch logo" />
         </a>
       </motion.div>
-      {/* <motion.div variants={dropUpVariants}>
-        <a aria-label='go to youtube' target="__blank" href="https://discord.gg/rsjungle" className="rounded-full p-2 bg-gray-50/50 duration-300 hover:bg-gray-50 hover:text-gray-50/70 flex items-center justify-center h-10 w-10 active:scale-95">
-          <img src="/youtube.svg" alt="youtube logo" />
-        </a>
-      </motion.div> */}
       <motion.div variants={dropUpVariants}>
         <a aria-label='go to reddit' target="__blank" href="https://reddit.com/user/RSJungle" className="rounded-full p-2 bg-gray-50/50 duration-300 hover:bg-gray-50 hover:text-gray-50/70 flex items-center justify-center h-10 w-10 active:scale-95">
           <img src="/reddit.svg" alt="reddit logo" />

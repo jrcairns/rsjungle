@@ -76,11 +76,14 @@ export default function Hero() {
       setIsSubmitting(true)
       const email = emailRef.current?.value
 
-      await new Promise(r => setTimeout(r, 2000))
-      // const res = await fetch(`https://track.customer.io/api/v1/forms/{{form_id}}/submit`, {
-      //   method: 'POST',
-      //   he
-      // })
+      await fetch('https://track.customer.io/api/v1/forms/01grpz7d3vah48mrrhxgzkbwt0/submit', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Basic NDc3NWI1OGZmOWM0OGRmMDNlZGU6MmE3NGFmMTkzNzEyZGMxNmQwMmU=',
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({ "data": { "email": email } })
+      })
 
       setIsSuccess(true)
     } catch (err) {
@@ -102,7 +105,7 @@ export default function Hero() {
       >
 
         <motion.div className='flex justify-between' variants={dropUpVariants}>
-          <h1 className='flex items-center text-2xl font-bold tracking-tight sm:text-4xl text-gray-50/90'><span>RS</span><span className='block ml-1 text-green-900 -skew-x-6 drop-shadow-xl'>Jungle</span></h1>
+          <img src="/rsjungle.png" alt="" />
           <div className="md:hidden">
             <a aria-label='go to linktree' target="__blank" href="https://linktr.ee/rsjungle" className="flex items-center justify-center w-10 h-10 p-2 duration-300 rounded-full bg-gray-50/50 hover:bg-gray-50 hover:text-gray-50/70">
               <img src="/linktree.svg" alt="linktree logo" />
@@ -118,8 +121,7 @@ export default function Hero() {
             <Countdown />
             {!isSuccess ? (
               <div className='flex flex-col'>
-                <form method="POST"
-                  action="https://customerioforms.com/forms/submit_action?site_id=4775b58ff9c48df03ede&form_id=79f05f8ab0a04a0&success_url=http://localhost:3000">
+                <form onSubmit={handleSubmit}>
                   <div className='relative flex overflow-hidden rounded-full sm:w-full sm:max-w-lg bg-white/70 backdrop-blur-lg sm:p-1 focus-within:ring-2 focus-within:ring-green-800'>
                     <input ref={emailRef} name="email" required placeholder="Enter your email" className="h-[50px] sm:h-auto placeholder-gray-600 flex-1 focus:outline-none px-4 bg-transparent" type="email" />
                     <button className='items-center justify-center hidden w-32 h-[50px] px-5 py-3 text-base font-medium duration-300 border border-transparent rounded-full shadow hover:shadow-xl sm:flex bg-gradient-to-r from-green-800 to-green-900 text-gray-50/90 hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:px-6' type="submit">
@@ -162,7 +164,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        <motion.div className='flex items-center justify-center gap-8' variants={containerVariants}>
+        <motion.div className='flex items-center justify-center gap-8 mt-8' variants={containerVariants}>
           <motion.div variants={gamesVariants}>
             <div className="flex items-center gap-2">
               <div className='bg-zinc-900/60 rounded p-1.5 shadow-xl'>

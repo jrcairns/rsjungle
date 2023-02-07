@@ -105,7 +105,7 @@ export default function Hero() {
       >
 
         <motion.div className='flex justify-between' variants={dropUpVariants}>
-          <img src="/rsjungle.png" alt="" />
+          <img className="w-40" src="/rsjungle.png" alt="" />
           <div className="md:hidden">
             <a aria-label='go to linktree' target="__blank" href="https://linktr.ee/rsjungle" className="flex items-center justify-center w-10 h-10 p-2 duration-300 rounded-full bg-gray-50/50 hover:bg-gray-50 hover:text-gray-50/70">
               <img src="/linktree.svg" alt="linktree logo" />
